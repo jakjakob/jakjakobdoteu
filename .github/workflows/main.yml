@@ -22,3 +22,5 @@ jobs:
           **/node_modules/**
           LICENSE
           README.md
+          **/.vscode*
+          **/.vscode*/**
