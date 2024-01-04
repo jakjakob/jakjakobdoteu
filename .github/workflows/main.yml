@@ -11,11 +11,11 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.samkirkland.com
-        username: myFtpUserName
-        password: ${{ secrets.password }}
+        server: ${{FTP_USERNAME}}
+        username: ${{FTP_USERNAME}}
+        password: ${{FTP_PASSWORD}}
         protocol: ftps
-        port: 1234 # todo replace with your web hosts ftps port
+        port: 21 # todo replace with your web hosts ftps port
         exclude: |
           **/.git*
           **/.git*/**
