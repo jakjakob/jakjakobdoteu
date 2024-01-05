@@ -25,10 +25,12 @@ footer{
     left:0;
     bottom:0;
     width: 100%;
+    display:flex;
 }
 footer > .social_icons{
     text-align: center;
     font-size:21px;
+    width:33%;
 }
 footer > .social_icons > a{
     text-decoration: none;
@@ -37,4 +39,15 @@ footer > .social_icons > a{
 }
 footer > .social_icons > a:hover{
     color:#4141FF;
+}
+footer > .foot_txt{
+    width:33%;
+    font-size:10px;
+    margin:auto;
+}
+footer > .foot_txt_left{
+    text-align:left;
+}
+footer > .foot_txt_right{
+    text-align: right;
 }
