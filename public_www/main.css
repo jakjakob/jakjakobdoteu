@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Work+Sans:wght@500&display=swap');
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -51,22 +51,64 @@ table {
 /*general stuff*/
 body {
     background-color: #0C0C0C;
-    color: aliceblue;
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
+    margin: 0.5rem;
+}
+.container{
+    color: aliceblue;
+}
+h1 {
+    display:block;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
 }
 /*links*/
 a{
     text-decoration: none;
+    color: #4141ff;
+    transition: 0.3s;
 }
 a:hover{
-    text-decoration: underline;
+    color: #3a3ae6;
 }
-a:link, a:active, a:visited{
-    color: #4141FF;
+/*navbar*/
+.navbar{
+    display:flex;
+    width:100%;
+    background-color: none;
+    left:0;
+    top:0px;
+    align-items:center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1rem;
+    padding: 0;
+    border:0;
+    box-sizing: border-box;
+}
+.navbar > .bar{
+    width: auto;
+}
+.navbar > .bar > li{
+    display:inline;
+}
+.navbar > .bar > li > a{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: red;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.navbar > .bar > li > a:hover{
+    color: #b30000;
 }
 /*footer*/
 footer{
-    padding: 3px;
+    padding: 0px;
     background-color: #2a2a2a;
     color: white;
     position:fixed;
@@ -78,20 +120,24 @@ footer{
 }
 footer > .social_icons{
     text-align: center;
-    font-size:21px;
+    font-size:1.5rem;
     width:33%;
+    margin:auto;
 }
 footer > .social_icons > a{
     text-decoration: none;
     color:white;
+    transition: 0.3s;
 }
 footer > .social_icons > a:hover{
-    color:#4141FF;
+    color:#3a3ae6;
 }
 footer > .foot_txt{
     width:33%;
-    font-size:10px;
+    font-size:1rem;
     margin:auto;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 footer > .foot_txt_left{
     text-align:left;
