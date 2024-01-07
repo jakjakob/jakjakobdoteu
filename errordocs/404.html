@@ -1,17 +1,85 @@
-<HTML>
-<HEAD>
-<TITLE>404 Not Found</TITLE>
-</HEAD>
-<BODY>
-<H1>Not Found</H1>
-The requested document was not found on this server.
-<P>
-<HR>
-<ADDRESS>
-Web Server
-</ADDRESS>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WIP</title>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
+<style>
+    .container{
+        display: grid;
+        place-items:center;
+    }
+    .homepage{
+        text-align: center;
+        margin:0 auto;
+    }
+    .homepage> h1{
+        font-size:4rem;
+    }
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="bar">
+            <li><a href="/">HOME</li>
+            <li><a href="/contact">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div id="placeholder404">
+
+    </div>
+
+    <footer id="footer">
+        <div class="foot_txt foot_txt_left">
+            &#xA9 2024 jakjakob <a href="https://github.com/jakjakob/jakjakobdoteu/blob/main/LICENSE">MIT License</a> 
+        </div>
+        <div class = "social_icons">
+            <a href="http://github.com/jakjakob"><i class="fa-brands fa-github"></i></a>
+            <a href="https://steamcommunity.com/id/real_jakjakob/"><i class="fa-brands fa-steam"></i></a>
+            <a href="https://x.com/jakjakobM"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:contact@jakjakob.eu"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="foot_txt foot_txt_right">
+            WIP - website not finished
+        </div>
+    </footer>
+    <script>
+        let foot_height=document.getElementById("footer").clientHeight +"px";
+        console.log(foot_height)
+        var r = document.querySelector(':root');
+        r.style.setProperty("--footer-height", foot_height);
+    </script>
+    <script>
+        // Wait for the entire document to be ready
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the placeholder div
+            var placeholderDiv = document.getElementById("placeholder404");
+
+            // Fetch content from another document
+            fetch('content/snippets.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Create a temporary div to hold the fetched content
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data;
+
+                    // Get the specific div you want to insert
+                    var specificDiv = tempDiv.querySelector('#404');
+
+                    // Check if the specific div exists before appending
+                    if (specificDiv) {
+                        // Append the specific div to the placeholder div
+                        placeholderDiv.appendChild(specificDiv);
+                    } else {
+                        console.error('Specific div not found in the fetched content.');
+                    }
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        });
+    </script>
+</html>
 
 <!--
    - Unfortunately, Microsoft has added a clever new
