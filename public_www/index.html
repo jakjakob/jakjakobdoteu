@@ -9,7 +9,6 @@
     .container{
         display: grid;
         place-items:center;
-        height:75vh;
     }
     .homepage{
         text-align: center;
@@ -28,14 +27,11 @@
         </ul>
     </div>
 
-    <div class="container">
-        <div class="homepage">
-            <h1>Hi! I am Jakob</h1>
-            <p>WIP - not finished - yeah the navbar doesnt work properly</p>
-        </div>
+    <div id="placeholderhome">
+
     </div>
 
-    <footer>
+    <footer id="footer">
         <div class="foot_txt foot_txt_left">
             &#xA9 2024 jakjakob <a href="https://github.com/jakjakob/jakjakobdoteu/blob/main/LICENSE">MIT License</a> 
         </div>
@@ -49,5 +45,38 @@
             WIP - website not finished
         </div>
     </footer>
-    
+    <script>
+        let foot_height=document.getElementById("footer").clientHeight +"px";
+        console.log(foot_height)
+        var r = document.querySelector(':root');
+        r.style.setProperty("--footer-height", foot_height);
+    </script>
+    <script>
+        // Wait for the entire document to be ready
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the placeholder div
+            var placeholderDiv = document.getElementById("placeholderhome");
+
+            // Fetch content from another document
+            fetch('content/snippets.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Create a temporary div to hold the fetched content
+                    var tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = data;
+
+                    // Get the specific div you want to insert
+                    var specificDiv = tempDiv.querySelector('#homepage-main');
+
+                    // Check if the specific div exists before appending
+                    if (specificDiv) {
+                        // Append the specific div to the placeholder div
+                        placeholderDiv.appendChild(specificDiv);
+                    } else {
+                        console.error('Specific div not found in the fetched content.');
+                    }
+                })
+                .catch(error => console.error('Error fetching content:', error));
+        });
+    </script>
 </html>

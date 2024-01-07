@@ -3,14 +3,31 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
+    "compounds": [
+        {
+          "name": "Server/Client",
+          "configurations": ["open msedge on localhost", "Launch webserver"],
+          "stopAll": true
+        }
+    ],
     "configurations": [
         
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "public_www/index.html",
+            "name": "open msedge on localhost",
+            "url": "http://localhost:8000/",
             "runtimeArgs": ["--inprivate"]
-        }
+        },
+        {
+            "name": "Launch webserver",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/pyserver.py",
+            "cwd": "${workspaceFolder}/public_www/",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
     ]
+    
 }

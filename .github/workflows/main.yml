@@ -27,3 +27,4 @@ jobs:
           README.md
           **/.vscode*
           **/.vscode*/**
+          pyserver.py
