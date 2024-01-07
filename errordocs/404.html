@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>WIP</title>
+    <title>404</title>
     <meta charset ="UTF-8">
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
         </ul>
     </div>
 
-    <div id="placeholder404">
+    <div id="placeholdernotound">
 
     </div>
 
@@ -55,10 +55,10 @@
         // Wait for the entire document to be ready
         document.addEventListener("DOMContentLoaded", function() {
             // Get the placeholder div
-            var placeholderDiv = document.getElementById("placeholder404");
+            var placeholderDiv = document.getElementById("placeholdernotound");
 
             // Fetch content from another document
-            fetch('content/snippets.html')
+            fetch('/content/snippets.html')
                 .then(response => response.text())
                 .then(data => {
                     // Create a temporary div to hold the fetched content

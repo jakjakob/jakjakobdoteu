@@ -58,7 +58,7 @@
             var placeholderDiv = document.getElementById("placeholderhome");
 
             // Fetch content from another document
-            fetch('content/snippets.html')
+            fetch('/content/snippets.html')
                 .then(response => response.text())
                 .then(data => {
                     // Create a temporary div to hold the fetched content
