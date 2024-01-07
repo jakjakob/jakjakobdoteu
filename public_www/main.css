@@ -56,11 +56,12 @@ table {
 body {
     background-color: #0C0C0C;
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
-    margin: 0.5rem;
 }
 .container{
     color: aliceblue;
     min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+    margin: 0.5rem;
+    margin-top: 0;
 }
 h1 {
     display:block;
@@ -74,11 +75,11 @@ h1 {
 /*links*/
 a{
     text-decoration: none;
-    color: #4141ff;
+    color: red;
     transition: 0.3s;
 }
 a:hover{
-    color: #3a3ae6;
+    color: #b30000;;
 }
 /*navbar*/
 .navbar{
@@ -93,8 +94,7 @@ a:hover{
     margin: 0;
     padding: 0;
     border:0;
-    box-sizing: border-box;
-    /*background-color: #b30000;*/
+    /*background-color: purple;*/
     height: var(--navbar-height);
 }
 .navbar > .bar{
@@ -106,12 +106,8 @@ a:hover{
 .navbar > .bar > li > a{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
-    color: red;
     margin-left: 5px;
     margin-right: 5px;
-}
-.navbar > .bar > li > a:hover{
-    color: #b30000;
 }
 /*footer*/
 footer{
@@ -124,6 +120,7 @@ footer{
     width: 100%;
     display:flex;
     margin:auto;
+    box-sizing:border-box;
 }
 footer > .social_icons{
     text-align: center;
@@ -137,7 +134,7 @@ footer > .social_icons > a{
     transition: 0.3s;
 }
 footer > .social_icons > a:hover{
-    color:#3a3ae6;
+    color: #b30000;
 }
 footer > .foot_txt{
     width:33%;

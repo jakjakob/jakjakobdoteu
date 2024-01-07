@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 <style>
-    .container{
+    .not-found-main{
+        min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
         display: grid;
-        place-items:center;
+        place-items: center;
     }
-    .homepage{
+   
+    .not-found{
         text-align: center;
-        margin:0 auto;
+        margin: 0 auto;
     }
-    .homepage> h1{
+    .not-found> h1{
         font-size:4rem;
     }
 </style>
@@ -27,9 +29,12 @@
         </ul>
     </div>
 
-    <div id="placeholdernotound">
+    <div class="container">
+        <div id="placeholdernotfound">
 
+        </div>
     </div>
+   
 
     <footer id="footer">
         <div class="foot_txt foot_txt_left">
@@ -46,16 +51,19 @@
         </div>
     </footer>
     <script>
-        let foot_height=document.getElementById("footer").clientHeight +"px";
+        window.addEventListener('resize', function() {
+            let foot_height=document.getElementById("footer").clientHeight +"px";
         console.log(foot_height)
         var r = document.querySelector(':root');
         r.style.setProperty("--footer-height", foot_height);
+        });
+        
     </script>
     <script>
         // Wait for the entire document to be ready
         document.addEventListener("DOMContentLoaded", function() {
             // Get the placeholder div
-            var placeholderDiv = document.getElementById("placeholdernotound");
+            var placeholderDiv = document.getElementById("placeholdernotfound");
 
             // Fetch content from another document
             fetch('/content/snippets.html')
@@ -66,7 +74,7 @@
                     tempDiv.innerHTML = data;
 
                     // Get the specific div you want to insert
-                    var specificDiv = tempDiv.querySelector('#not-found');
+                    var specificDiv = tempDiv.querySelector('#not-found-main');
 
                     // Check if the specific div exists before appending
                     if (specificDiv) {
@@ -80,21 +88,3 @@
         });
     </script>
 </html>
-
-<!--
-   - Unfortunately, Microsoft has added a clever new
-   - "feature" to Internet Explorer. If the text of
-   - an error's message is "too small", specifically
-   - less than 512 bytes, Internet Explorer returns
-   - its own error message. You can turn that off,
-   - but it's pretty tricky to find switch called
-   - "smart error messages". That means, of course,
-   - that short error messages are censored by default.
-   - IIS always returns error messages that are long
-   - enough to make Internet Explorer happy. The
-   - workaround is pretty simple: pad the error
-   - message with a big comment like this to push it
-   - over the five hundred and twelve bytes minimum.
-   - Of course, that's exactly what you're reading
-   - right now.
-   -->
