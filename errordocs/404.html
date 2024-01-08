@@ -3,63 +3,39 @@
 <head>
     <title>404</title>
     <meta charset ="UTF-8">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/style/main.css">
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
-<style>
-    .not-found-main{
-        min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
-        display: grid;
-        place-items: center;
-    }
-   
-    .not-found{
-        text-align: center;
-        margin: 0 auto;
-    }
-    .not-found> h1{
-        font-size:4rem;
-    }
-</style>
+
+    <script src="/scripts/main.js"></script>
+    <script src="scripts/include-navbar.js"></script>
+    <script src="scripts/include-footer-error.js"></script>
+    <style>
+        .error-main{
+            min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+            display: grid;
+            place-items: center;
+        }
+    
+        .error{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .error> h1{
+            font-size:4rem;
+        }
+    </style>
 </head>
 <body>
-    <div class="navbar">
-        <ul class="bar">
-            <li><a href="/">HOME</li>
-            <li><a href="/contact">CONTACT</a></li>
-        </ul>
-    </div>
+    <div id="navbar-insert"></div>
 
-    <div class="container">
-        <div class = "not-found-main">
-            <div class="not-found">
-                <h1>404 | Not found</h1>
-                <p>It seems like the page you are searching doesn't exist - Did you maybe misspell something?</p>
+    <main>
+        <div class ="error-main">
+            <div class="error">
+                    <h1>404 | Not found</h1>
+                    <p>The requested page doesn't seem to exist</p>
             </div>
         </div>
-    </div>
-   
+    </main>
 
-    <footer id="footer">
-        <div class="foot_txt foot_txt_left">
-            &#xA9 2024 jakjakob <a href="https://github.com/jakjakob/jakjakobdoteu/blob/main/LICENSE">MIT License</a> 
-        </div>
-        <div class = "social_icons">
-            <a href="http://github.com/jakjakob"><i class="fa-brands fa-github"></i></a>
-            <a href="https://steamcommunity.com/id/real_jakjakob/"><i class="fa-brands fa-steam"></i></a>
-            <a href="https://x.com/jakjakobM"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="mailto:contact@jakjakob.eu"><i class="fa-solid fa-envelope"></i></a>
-        </div>
-        <div class="foot_txt foot_txt_right">
-            WIP - website not finished
-        </div>
-    </footer>
-    <script>
-        window.addEventListener('resize', function() {
-            let foot_height=document.getElementById("footer").clientHeight +"px";
-        console.log(foot_height)
-        var r = document.querySelector(':root');
-        r.style.setProperty("--footer-height", foot_height);
-        });
-        
-    </script>
+    <div id="footer-insert"></div>
 </html>

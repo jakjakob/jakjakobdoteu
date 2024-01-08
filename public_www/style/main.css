@@ -57,7 +57,7 @@ body {
     background-color: #0C0C0C;
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
 }
-.container{
+main{
     color: aliceblue;
     min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
     margin: 0.5rem;
@@ -82,7 +82,7 @@ a:hover{
     color: #b30000;;
 }
 /*navbar*/
-.navbar{
+nav{
     display:flex;
     width:100%;
     background-color: none;
@@ -97,13 +97,13 @@ a:hover{
     /*background-color: purple;*/
     height: var(--navbar-height);
 }
-.navbar > .bar{
+nav > .bar{
     width: auto;
 }
-.navbar > .bar > li{
+nav > .bar > li{
     display:inline;
 }
-.navbar > .bar > li > a{
+nav > .bar > li > a{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
     margin-left: 5px;

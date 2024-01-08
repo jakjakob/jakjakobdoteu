@@ -1,31 +1,41 @@
-<HTML>
-<HEAD>
-<TITLE>405 Method Not Allowed</TITLE>
-</HEAD>
-<BODY>
-<H1>Method Not Allowed</H1>
-The HTTP verb used to access this page is not allowed.<P>
-<HR>
-<ADDRESS>
-Web Server
-</ADDRESS>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>405</title>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 
-<!--
-- Unfortunately, Microsoft has added a clever new
-- "feature" to Internet Explorer. If the text of
-- an error's message is "too small", specifically
-- less than 512 bytes, Internet Explorer returns
-- its own error message. You can turn that off,
-- but it's pretty tricky to find switch called
-- "smart error messages". That means, of course,
-- that short error messages are censored by default.
-- IIS always returns error messages that are long
-- enough to make Internet Explorer happy. The
-- workaround is pretty simple: pad the error
-- message with a big comment like this to push it
-- over the five hundred and twelve bytes minimum.
-- Of course, that's exactly what you're reading
-- right now.
--->
+    <script src="/scripts/main.js"></script>
+    <script src="scripts/include-navbar.js"></script>
+    <script src="scripts/include-footer-error.js"></script>
+    <style>
+        .error-main{
+            min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+            display: grid;
+            place-items: center;
+        }
+    
+        .error{
+            text-align: center;
+            margin: 0 auto;
+        }
+        .error> h1{
+            font-size:4rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-insert"></div>
+
+    <main>
+        <div class ="error-main">
+            <div class="error">
+                    <h1>405 | Method Not Allowed</h1>
+                    <p>The HTTP verb used to access this page is not allowed.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-insert"></div>
+</html>
