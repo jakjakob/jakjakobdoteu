@@ -7,11 +7,10 @@
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 
     <script src="/scripts/main.js"></script>
-    <script src="scripts/include-navbar.js"></script>
-    <script src="scripts/include-footer-error.js"></script>
+    <script src="/scripts/include-navbar.js"></script>
+    <script src="/scripts/include-footer-error.js"></script>
     <style>
-        .error-main{
-            min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+        main{
             display: grid;
             place-items: center;
         }
@@ -29,11 +28,9 @@
     <div id="navbar-insert"></div>
 
     <main>
-        <div class ="error-main">
-            <div class="error">
-                    <h1>407 | Proxy Authentication Required</h1>
-                    <p>You must be authenticated by a proxy server before the Web server can execute your request.</p>
-            </div>
+        <div class="error">
+                <h1>407 | Proxy Authentication Required</h1>
+                <p>You must be authenticated by a proxy server before the Web server can execute your request.</p>
         </div>
     </main>
 

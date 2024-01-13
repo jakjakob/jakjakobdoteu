@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jakob's homepage</title>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/blog.css">
+    <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/include-navbar.js"></script>
+    <script src="/scripts/include-footer-blog.js"></script>
+
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+  ></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="navbar-insert"></div>
+
+    <main>
+        <div class="article-infos">
+            <div class="date">&insert date here& Edited: xxx</div>
+            <div class="author"><img src="/content/immages/test-author.png"> AUTHOR</div>
+        </div>
+    
+        <article>
+            <zero-md src="/content/markdown-sample.md">
+                <script type="text/markdown">Failed to load markdown file. Report an [issue](https://github.com/jakjakob/jakjakobdoteu/issues/new)</script>
+            </zero-md>
+        </article>
+    </main>
+
+    <div id="footer-insert"></div>
+</html>

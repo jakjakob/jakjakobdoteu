@@ -7,11 +7,10 @@
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 
     <script src="/scripts/main.js"></script>
-    <script src="scripts/include-navbar.js"></script>
-    <script src="scripts/include-footer-error.js"></script>
+    <script src="/scripts/include-navbar.js"></script>
+    <script src="/scripts/include-footer-error.js"></script>
     <style>
-        .error-main{
-            min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+        main{
             display: grid;
             place-items: center;
         }
@@ -29,16 +28,14 @@
     <div id="navbar-insert"></div>
 
     <main>
-        <div class ="error-main">
-            <div class="error">
-                    <h1>401 | Authorization Required</h1>
-                    <p>This server could not verify that you
-                     are authorized to access the document
-                     requested.  Either you supplied the wrong
-                     credentials (e.g., bad password), or your
-                     browser doesn't understand how to supply
-                     the credentials required.</p>
-            </div>
+        <div class="error">
+                <h1>401 | Authorization Required</h1>
+                <p>This server could not verify that you
+                    are authorized to access the document
+                    requested.  Either you supplied the wrong
+                    credentials (e.g., bad password), or your
+                    browser doesn't understand how to supply
+                    the credentials required.</p>
         </div>
     </main>
 
