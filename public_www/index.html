@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="/style/main.css">
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 
+    <script> var footerVariant = 'std'</script>
     <script src="/scripts/main.js"></script>
-    <script src="/scripts/include-navbar.js"></script>
-    <script src="/scripts/include-footer-std.js"></script>
 
     <script>
         function mainheight(){
@@ -32,6 +31,23 @@
         .home-welcome> h1{
             font-size:4rem;
         }
+        .stuff-pres{
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 1rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        .stuff-pres > div{
+            background-color: #202020;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+        }
+        .stuff-pres > div > h3{
+            font-size: 1.25rem;
+        }
     </style>
 </head>
 <body>
@@ -44,7 +60,17 @@
             <p>Please note that this website is currently still being developed and is not finished.</p>
         </div>
         <script>mainheight();</script> <!--calculates main height directly after it loaded-->
-        <div class=""></div>
+        <div class="stuff-pres">
+            <div>
+                <h3 class="title">TITIELE 1</h3>
+                other stuff wjfjs
+            </div>
+            <div>b</div>
+            <div>c</div>
+            <div>d</div>
+            <div>e</div>
+            <div>f</div>
+        </div>
     </main>
 
     <div id="footer-insert"></div>

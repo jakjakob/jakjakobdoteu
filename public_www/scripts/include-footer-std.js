@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Append the dynamic content to the placeholder div
             placeholderDiv.appendChild(dynamicContent);
+
+            footerheight();
         })
         .catch(error => console.error('Error fetching content:', error));
 });
