@@ -10,7 +10,7 @@
     <script src="/scripts/main.js"></script>
     <style>
         .blog-spacer{
-            min-height: 12vh;
+            min-height: 5vh;
         }
         .blog-spacer-two{
             min-height: 2rem;
@@ -26,9 +26,7 @@
             margin: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;/*
-            margin-left: 2rem;
-            margin-right: 2rem;*/
+            gap: 1.5rem;
         }
         .stuff-pres > a{
             background-color: #202020;
@@ -44,6 +42,10 @@
             font-size: 0.8rem;
             margin-bottom: 0.4rem;
             font-style: italic;
+            display: inline;
+        }
+        .stuff-pres > a > h4 > .blog-date-edit{
+            display: inline;
         }
         .stuff-pres > a > h3{
             font-size: 1.25rem;
@@ -85,7 +87,7 @@
                 hi
             </a>
             <a href="/blog">
-                <h4 class="blog-date">DATE</h4><h4 class="blog-date-edit">Edited: EDITED</h4>
+                <h4 class="blog-date">15.05.2024</h4><h4 class="blog-date-edit"> Edited: 16.05.2024</h4>
                 <h3 class="title">ARTICLE TITLE</h3>
                 <img src="/content/immages/test-img2.png" alt="placeholder immage. just white with some lines">
                 THE TEMPLATE I want to use. Just for testing. 
