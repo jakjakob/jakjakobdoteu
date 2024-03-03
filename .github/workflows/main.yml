@@ -28,3 +28,5 @@ jobs:
           **/.vscode*
           **/.vscode*/**
           pyserver.py
+          **/blog-stuff*
+          **/blog-stuff*/**
