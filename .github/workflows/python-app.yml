@@ -1,0 +1,29 @@
+name: build blog-page
+
+on:
+  push:
+    branches: working #CHANGE BACK TO MAIN
+    paths: public_www/blog/article/content
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11"
+    - name: Install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install PyYAML
+    - name: Test with pytest
+      run: |
+        cd blog-stuff
+        python3 create-article.py
