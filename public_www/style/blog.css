@@ -1,0 +1,32 @@
+.article-infos{
+    display: flex;
+    color:#a9a9a9;
+    border: 5px;
+    font-size: 1rem;
+}
+.article-infos > .date{
+    text-align:left;
+    width: 50%;
+    padding: auto;
+}
+.article-infos > .author{
+    text-align:right;
+    width: 50%;
+    padding: auto;/*NOT centered*/
+}
+.article-infos > .author > img{
+    height: 1.2rem;
+}
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+}
+
+@media (max-width: 767px) {
+    .markdown-body {
+        padding: 15px;
+    }
+}

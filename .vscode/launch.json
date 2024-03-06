@@ -21,7 +21,7 @@
         },
         {
             "name": "Launch webserver",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/pyserver.py",
             "cwd": "${workspaceFolder}/public_www/",

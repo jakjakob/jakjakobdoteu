@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jakob's blog</title>
+    <meta charset ="UTF-8">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/blog.css">
+    <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
+
+    <script> var footerVariant = 'blog'</script>
+    <script src="/scripts/main.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="navbar-insert"></div>
+
+    <main>
+        <div class="article-infos">
+            <div class="date">{{date}}</div>
+            <div class="author"><img src="/content/immages/test-author.png">{{author}}</div>
+        </div>
+    
+        <article class="markdown-body">
+            <zero-md src="/content/markdown-sample.md">
+                <template>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.css">
+                </template>
+                <script type="text/markdown">Failed to load markdown file. Report an [issue](https://github.com/jakjakob/jakjakobdoteu/issues/new)</script>
+            </zero-md>
+        </article>
+    </main>
+
+    <div id="footer-insert"></div>
+</html>

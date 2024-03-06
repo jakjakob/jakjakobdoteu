@@ -1,43 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jakob's homepage</title>
+    <title>Jakob's blog</title>
     <meta charset ="UTF-8">
     <link rel="stylesheet" href="/style/main.css">
     <script src="https://kit.fontawesome.com/01d13eb77e.js" crossorigin="anonymous"></script>
 
-    <script> var footerVariant = 'std'</script>
+    <script> var footerVariant = 'blog'</script>
     <script src="/scripts/main.js"></script>
-
-    <script>
-        function mainheight(){
-            let home_main_height=document.getElementById("home-welcome").clientHeight +"px";
-        var r = document.querySelector(':root');
-        r.style.setProperty("--home-main-height", home_main_height);
-        }
-        window.addEventListener('resize', function(){mainheight();});
-    </script>
     <style>
-        :root{
-            --home-main-height: 1 rem; /*not actual, placeholder*/
+        .blog-spacer{
+            min-height: 5vh;
         }
-        .home-spacer{
-            min-height: calc((100vh - var(--navbar-height) - var(--footer-height) - var(--home-main-height))/2);
+        .blog-spacer-two{
+            min-height: 2rem;
         }
-        .home-welcome{
-            text-align: center;
-            margin: 0 auto;
+        .home-blog{
+            margin: 0  auto;
+            margin-left: 2rem;
         }
-        .home-welcome> h1{
-            font-size:4rem;
+        .home-blog> h1{
+            font-size:3rem;
         }
         .stuff-pres{
-            margin-top: 10rem;
+            margin: 2rem;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-left: 100px;
-            margin-right: 100px;
+            gap: 1.5rem;
         }
         .stuff-pres > a{
             background-color: #202020;
@@ -52,6 +41,11 @@
         .stuff-pres > a > h4{
             font-size: 0.8rem;
             margin-bottom: 0.4rem;
+            font-style: italic;
+            display: inline;
+        }
+        .stuff-pres > a > h4 > .blog-date-edit{
+            display: inline;
         }
         .stuff-pres > a > h3{
             font-size: 1.25rem;
@@ -71,12 +65,12 @@
     <div id="navbar-insert"></div>
 
     <main>
-        <div class="home-spacer"></div>
-        <div class="home-welcome" id="home-welcome">
-            <h1>Hi! I am Jakob</h1>
+        <div class="blog-spacer"></div>
+        <div class="home-blog">
+            <h1>The Blog</h1>
             <p>Please note that this website is currently still being developed and is not finished.</p>
         </div>
-        <script>mainheight();</script> <!--calculates main height directly after it loaded-->
+        <div class="blog-spacer-two"></div>
         <div class="stuff-pres">
             <a href="/">
                 ksdjkn
@@ -92,6 +86,13 @@
                 x
                 hi
             </a>
+            <a href="/blog">
+                <h4 class="blog-date">15.05.2024</h4><h4 class="blog-date-edit"> Edited: 16.05.2024</h4>
+                <h3 class="title">ARTICLE TITLE</h3>
+                <img src="/content/immages/test-img2.png" alt="placeholder immage. just white with some lines">
+                THE TEMPLATE I want to use. Just for testing. 
+            </a>
+            <a href="/blog/template.html">TEMPLATE - WIP</a>
             <a href="/">
                 <h3 class="title">TITLE 2 lets goo sf</h3>
                 <img src="/content/immages/test-img2.png">
