@@ -9,11 +9,7 @@
 
     <script> var footerVariant = 'blog'</script>
     <script src="/scripts/main.js"></script>
-
-    <script
-    type="module"
-    src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
-  ></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
     <style>
     </style>
 </head>
@@ -22,12 +18,15 @@
 
     <main>
         <div class="article-infos">
-            <div class="date">&insert date here& Edited: xxx</div>
-            <div class="author"><img src="/content/immages/test-author.png"> AUTHOR</div>
+            <div class="date">{{date}}</div>
+            <div class="author"><img src="/content/immages/test-author.png">{{author}}</div>
         </div>
     
-        <article>
+        <article class="markdown-body">
             <zero-md src="/content/markdown-sample.md">
+                <template>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.css">
+                </template>
                 <script type="text/markdown">Failed to load markdown file. Report an [issue](https://github.com/jakjakob/jakjakobdoteu/issues/new)</script>
             </zero-md>
         </article>
